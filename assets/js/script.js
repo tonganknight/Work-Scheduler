@@ -238,4 +238,26 @@ if(timenow < fiveblock){
 
 
 
- 
+ $("#9").on("click","p",function(){
+    var text = $(this)
+    .text()
+    .trim();
+    var textInput = $("<textarea>")
+  .addClass("form-control")
+  .val(text);
+  $(this).replaceWith(textInput);
+  textInput.trigger("focus");
+
+  $(this).val()
+
+
+ $("#9").on("blur", "textarea", function(){
+     
+     var taskP = $("<p>")
+  .addClass("m-1")
+  .text(text);
+
+// replace textarea with p element
+$(this).replaceWith(taskP);
+ });
+});
