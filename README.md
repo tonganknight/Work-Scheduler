@@ -2,7 +2,7 @@ Work Calendar
 -------------------------------------------------------------------------------
 This is a Work Calendar that will allow you to schedule each our of your day. 
 
-![work-scheduler-screenshot](/assets/images/work-scheduler.JPG)
+![work-scheduler-screenshot](https://github.com/tonganknight/Work-Scheduler/blob/master/assets/Images/work-scheduler.JPG)
 
 Color Codes 
 -------------
