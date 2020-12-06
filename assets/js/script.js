@@ -649,12 +649,13 @@ function loadTasks(){
 //end of load function
 
 
-coloreval()
+
 
 
 setInterval(function(){
 coloreval()
-}, 3000)
+}, 3000000)
 
+coloreval()
 
 loadTasks()
