@@ -25,6 +25,10 @@ var hourofdaystart =moment(daystart).format("HH")
 var timenowhour =moment().format("HH")
 
 
+timenow =moment().format("HH")
+
+
+
 //declaring to start of day from currenttime  
 
 
@@ -34,12 +38,12 @@ var timenowhour =moment().format("HH")
 
 function coloreval(){
 
-   console.log("fire!")
 
       //9AM
-      var nineblock = moment(daystart).add(9,'hours');
+      var nineblock = moment(hourofdaystart).add(9,'hours');
       nineblock = moment(nineblock).format("HH");
 
+     
 
       //color logic
       if(timenow > nineblock){
@@ -59,36 +63,38 @@ function coloreval(){
          document.getElementById("9").classList.remove("present")
          document.getElementById("9").classList.remove("past")
          document.getElementById("9").classList.add("future")
-         
+        
       }
 
          //10AM
-         var tenblock = moment(daystart).add(10,'hours');
-         tenblock = moment(tenblock).format("dddd, MMMM Do YYYY, h a");
+         var tenblock = moment(hourofdaystart).add(10,'hours');
+         tenblock = moment(tenblock).format("HH");
 
+      
          //color logic
          if(timenow > tenblock){
          document.getElementById("10").classList.remove("future")
          document.getElementById("10").classList.remove("present")
          document.getElementById("10").classList.add("past")
-         
+         console.log("if1")
          }
 
          if(timenow == tenblock){
          document.getElementById("10").classList.remove("future")
          document.getElementById("10").classList.add("present")
+         console.log("if2")
          } 
 
-      if(timenow < tenblock){
+         if(timenow < tenblock){
          document.getElementById("10").classList.remove("present")
          document.getElementById("10").classList.remove("past")
          document.getElementById("10").classList.add("future")
-         
+         console.log("if3")
       }
 
       //11AM
-      var elevenblock = moment(daystart).add(11,'hours');
-      elevenblock =moment(elevenblock).format("dddd, MMMM Do YYYY, h a");
+      var elevenblock = moment(hourofdaystart).add(11,'hours');
+      elevenblock =moment(elevenblock).format("HH");
 
       //color logic
       if(timenow > elevenblock){
@@ -109,8 +115,8 @@ function coloreval(){
       }
 
       //12PM
-      var noonblock = moment(daystart).add(12,'hours');
-      noonblock =moment(noonblock).format("dddd, MMMM Do YYYY, h a");
+      var noonblock = moment(hourofdaystart).add(12,'hours');
+      noonblock =moment(noonblock).format("HH");
 
       //color logic
          if(timenow > noonblock){
@@ -131,8 +137,8 @@ function coloreval(){
          }
 
       //1pm
-      var oneblock = moment(daystart).add(13,'hours');
-      oneblock =moment(oneblock).format("dddd, MMMM Do YYYY, h a");
+      var oneblock = moment(hourofdaystart).add(13,'hours');
+      oneblock =moment(oneblock).format("HH");
 
       //color logic
          if(timenow > oneblock){
@@ -153,8 +159,8 @@ function coloreval(){
          }
 
          //2pm
-         var twoblock = moment(daystart).add(14,'hours');
-         twoblock =moment(twoblock).format("dddd, MMMM Do YYYY, h a");
+         var twoblock = moment(hourofdaystart).add(14,'hours');
+         twoblock =moment(twoblock).format("HH");
 
          //color logic
          if(timenow > twoblock){
@@ -175,8 +181,8 @@ function coloreval(){
          }
 
          //3PM
-         var threeblock = moment(daystart).add(15,'hours');
-         threeblock =moment(threeblock).format("dddd, MMMM Do YYYY, h a");
+         var threeblock = moment(hourofdaystart).add(15,'hours');
+         threeblock =moment(threeblock).format("HH");
 
             //color logic
             if(timenow > threeblock){
@@ -198,8 +204,10 @@ function coloreval(){
             }
 
          //4PM
-         var fourblock = moment(daystart).add(16,'hours');
-         fourblock =moment(fourblock).format("dddd, MMMM Do YYYY, h a");
+         var fourblock = moment(hourofdaystart).add(16,'hours');
+         fourblock =moment(fourblock).format("HH");
+
+            
 
             //color logic
             if(timenow > fourblock){
@@ -219,21 +227,19 @@ function coloreval(){
                   document.getElementById("4").classList.remove("present")
                   document.getElementById("4").classList.remove("past")
                   document.getElementById("4").classList.add("future")
-                  
+                 
             }
 
-
       //5PM
-
-      var fiveblock =moment(daystart).add(17, 'hours')
-      fiveblock = moment(fiveblock).format("dddd, MMMM Do YYYY, h a");
+      var fiveblock =moment(hourofdaystart).add(17, 'hours')
+      fiveblock = moment(fiveblock).format("HH");
          
 
          //color logic
       if(timenow > fiveblock){
-         document.getElementById("5").classList.remove("past")
          document.getElementById("5").classList.remove("future")
-         document.getElementById("5").classList.add("future")
+         document.getElementById("5").classList.remove("present")
+         document.getElementById("5").classList.add("past")
       }
       
       if(timenow == fiveblock){
@@ -248,13 +254,14 @@ function coloreval(){
       }
 
       //6PM
-      var sixblock =moment(daystart).add(18, 'hours')
-      sixblock = moment(sixblock).format("dddd, MMMM Do YYYY, h a");
+      var sixblock =moment(hourofdaystart).add(18, 'hours')
+      sixblock = moment(sixblock).format("HH");
 
       //color logic
       if(timenow > sixblock){
-         document.getElementById("6").classList.remove("past")
-         document.getElementById("6").classList.add("future")
+         document.getElementById("6").classList.remove("future")
+         document.getElementById("5").classList.remove("present")
+         document.getElementById("6").classList.add("past")
       }
 
       if(timenow == sixblock){
