@@ -76,20 +76,20 @@ function coloreval(){
          document.getElementById("10").classList.remove("future")
          document.getElementById("10").classList.remove("present")
          document.getElementById("10").classList.add("past")
-         console.log("if1")
+         
          }
 
          if(timenow == tenblock){
          document.getElementById("10").classList.remove("future")
          document.getElementById("10").classList.add("present")
-         console.log("if2")
+         
          } 
 
          if(timenow < tenblock){
          document.getElementById("10").classList.remove("present")
          document.getElementById("10").classList.remove("past")
          document.getElementById("10").classList.add("future")
-         console.log("if3")
+        
       }
 
       //11AM
