@@ -2,9 +2,9 @@ Work Calendar
 -------------------------------------------------------------------------------
 This is a Work Calendar that will allow you to schedule each our of your day. 
 
-![Screen Shot 1 login](https://github.com/quaylas/readviews/blob/main/public/assets/images/screenshot2.JPG)
+![Work Scheduler UI](https://github.com/tonganknight/Work-Scheduler/blob/master/assets/Images/work-scheduler.JPG)
 
-![Screen Shot2 account](https://github.com/quaylas/readviews/blob/main/public/assets/images/screenshot1.JPG)
+
 
 
 Color Codes 
